@@ -1,0 +1,14 @@
+[Unit]
+Description=WebSocket Daphne Service for PORTAL_COD2-t
+After=network.target
+
+[Service]
+Type=simple
+User=root
+#Group = nginx
+WorkingDirectory=/var/www/PORTAL_COD2/src
+ExecStart=/var/www/PORTAL_COD2/env/bin/python /var/www/PORTAL_COD2/env/bin/daphne  -p 9966 portal.asgi:application
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

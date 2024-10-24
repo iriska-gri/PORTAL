@@ -1,0 +1,9 @@
+env/
+/__pycache__/
+/*/__pycache__/
+/*/migrations/
+portal/ds.py
+/front/node_modules/
+*.sqlite3
+/media/
+/static/
